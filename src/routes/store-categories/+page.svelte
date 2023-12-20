@@ -1,4 +1,10 @@
- <!-- *********************Page Navigation*********************** -->
+<script>
+// @ts-nocheck
+
+    /** @type {import('./$types').PageServerData} */
+    export let data;
+</script>
+<!-- *********************Page Navigation*********************** -->
  <section>
     <div class="container mt-4">
         <div class="row navigation">
@@ -16,214 +22,18 @@
     <div class="row">
         <div class="col-lg-10 col-md-12 col-sm-12 mx-auto">
            <div class="row row-cols-3">
+            {#each data.res as item}
                 <div class="col-lg-2 col-md-3 col-sm-4 category-box">
                     <div class="category-item">
                         <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/electronics.png" alt=""></a>
+                        <a href="/store-category/{item.slug}"> <img src="https://couponatcart.com/images/{item.thumb}" alt=""></a>
                         </div>
                         <div class="category-title">
-                            <a href="./sub-category.html">Electronics</a>
+                            <a href="/store-category/{item.slug}">{item.name}</a>
                         </div>
                     </div>
                 </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/grooming.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Grooming</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/treadmill_2382633.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Fitness</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/fashion.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Fashion</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/imac_483141.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Computer</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/kitchen.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Kitchen</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                 <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/furniture.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Furniture</a>
-                        </div>
-                    </div>
-                </div>
-                 <!-- ******************** -->
-                 <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/software_3950815.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Software</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/car_741444.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Automotive</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/books.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Books</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/baby-care.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Baby Care</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/pet.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Pet Care</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/grocery.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Grocery</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/yoga.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Yoga</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/medicine_3022827.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Supliments</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/adult.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Adult</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/pharmacy.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Pharmacy</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/beauty.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Beauty</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ******************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="./sub-category.html"> <img src="./images/electronics.png" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="./sub-category.html">Appliances</a>
-                        </div>
-                    </div>
-                </div>
+                {/each}
                 <!-- ******************** -->
            </div>
         </div>

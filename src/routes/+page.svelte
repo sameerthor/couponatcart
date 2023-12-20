@@ -1,8 +1,39 @@
 <script>
+            import { clickOutside } from "./clickOutside.js";
     /** @type {import('./$types').PageServerData} */
     export let data;
-    console.log(data);
-</script>
+    let showCouponModal = false;
+    let showDealModal = false;
+    let modalData = null;
+
+    const showModal = (a, b) => {
+        let c = document.createElement("a");
+        c.target = "_blank";
+        c.href = b.aff_url;
+        c.click();
+        modalData = b.coupons[0];
+        setTimeout(function () {
+            if (a == "showCouponModal") {
+                showCouponModal = true;
+            } else {
+                showDealModal = true;
+            }
+        }, 100);
+    };
+
+    const hideModal = () => {
+        showCouponModal = false;
+        showDealModal = false;
+    };
+
+    const copy = (word) => {
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(word);
+
+        // Alert the copied text
+        alert("Copied the code: " + word);
+    };
+    </script>
 
 <!-- ******************************************************************** -->
 <section class="container-fluid" style="background-color: #f1f1fe">
@@ -94,138 +125,18 @@
         <div class="col-lg-10 col-md-10 col-sm-10 mx-auto">
             <h2>Top Online Stores</h2>
             <div class="row row-cols-2">
+                {#each data.stores.slice(0,12) as item}
                 <div class="col-lg-2 col-md-3 col-sm-4 online-box">
                     <div class="online-item">
-                        <a href=""
+                        <a href="/{item.slug}"
                             ><img
-                                src="./images/flipkart-coupon-codes-new-logo1.png"
+                                src="https://couponatcart.com/images/{item.store_logo}"
                                 alt=""
                             /></a
                         >
                     </div>
                 </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/myntra-coupon-codes-1.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/croma-coupon-codes-1.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/oyorooms-coupon-codes.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/makemytrip-deal-codes.png"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/boat-coupon-codes-1.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/oneplus-coupon-codes.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/hp-online-coupon-codes.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/Lenovo-coupon-codes-1.png"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/tatacliq-coupon-codes-1.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/booking-coupon-codes-1.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
-                <div class="col-lg-2 col-md-3 col-sm-4 online-box">
-                    <div class="online-item">
-                        <a href=""
-                            ><img
-                                src="./images/zomato-coupon-codes.jpg"
-                                alt=""
-                            /></a
-                        >
-                    </div>
-                </div>
-                <!-- ***************** -->
+                {/each}
             </div>
         </div>
     </div>
@@ -236,26 +147,46 @@
         <div class="col-lg-10 col-md-12 col-sm-10 mx-auto">
             <h2>Hot Deals of the day</h2>
             <div class="row">
+                {#each data.stores.slice(12,24) as item}
 
                 <div class="col-lg-3 col-md-4 col-sm-12 deal-box">
                     <div class="deal-item">
-                        <a href="">
+                        <a href="/{item.slug}">
                             <img
-                                src="./images/PlumGoodness-coupon-codes-.jpg"
+                                src="https://couponatcart.com/images/{item.store_logo}"
                                 alt=""
                             /></a
                         >
                         <p class="desc">
-                            Special Offer – BUY 1 GET 1 FREE On Selected Beauty
-                            Products + FREE 4 Plums On Rs.1,299
+                            {item.coupons.length>0?item.coupons[0].descp:''}
                         </p>
+                        {#if item.is_deal == 1}
                         <button
+                            id="unlockDeal"
+                            on:click={() => {
+                                showModal("showDealModal", item);
+                            }}
                             data-bs-toggle="modal"
-                            data-bs-target="#popUp"
-                            type="button">discount code</button
+                            data-bs-target="#getDeal"
+                            type="button"
+                            ><i
+                                class="fa fa-unlock-alt"
+                                aria-hidden="true"
+                            ></i>unlock deal</button
                         >
+                    {:else}
+                        <button
+                            on:click={() => {
+                                showModal("showCouponModal", item);
+                            }}
+                            data-bs-toggle="modal"
+                            data-bs-target="#displayCode"
+                            type="button">show code</button
+                        >
+                    {/if}
                     </div>
                 </div>
+                {/each}
             </div>
         </div>
     </div>
@@ -265,77 +196,128 @@
     <div class="container">
         <h2>Get Discount form your favirout stores</h2>
         <div class="row row-cols-2">
+            {#each  data.stores.slice(24,36) as item }
             <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
                 <div class="store-item">
-                    <a href=""
-                        ><img src="./images/levis_772_001_2.png" alt="" /></a
+                    <a href="/{item.slug}"
+                        ><img src="https://couponatcart.com/images/{item.store_logo}" alt="" /></a
                     >
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
+                    <a href="/{item.slug}" class="discount-tag">UP TO {item.coupons[0].type_text}% OFF</a>
                 </div>
             </div>
-            <!-- *********************** -->
-            <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
-                <div class="store-item">
-                    <a href=""><img src="./images/walmart.webp" alt="" /></a>
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
-                </div>
-            </div>
-            <!-- *********************** -->
-            <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
-                <div class="store-item">
-                    <a href=""><img src="./images/ubereates.webp" alt="" /></a>
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
-                </div>
-            </div>
-            <!-- *********************** -->
-            <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
-                <div class="store-item">
-                    <a href=""><img src="./images/chewy.webp" alt="" /></a>
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
-                </div>
-            </div>
-            <!-- *********************** -->
-            <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
-                <div class="store-item">
-                    <a href=""
-                        ><img src="./images/reebok_693_001_4.png" alt="" /></a
-                    >
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
-                </div>
-            </div>
-            <!-- *********************** -->
-            <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
-                <div class="store-item">
-                    <a href=""><img src="./images/ebay.webp" alt="" /></a>
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
-                </div>
-            </div>
-            <!-- *********************** -->
-            <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
-                <div class="store-item">
-                    <a href=""
-                        ><img
-                            src="./images/boat-coupon-codes-1.jpg"
-                            alt=""
-                        /></a
-                    >
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
-                </div>
-            </div>
-            <!-- *********************** -->
-            <div class="col-lg-1 col-md-3 col-sm-6 store-box mx-auto">
-                <div class="store-item">
-                    <a href=""
-                        ><img src="./images/Ajio_1555310077.avif" alt="" /></a
-                    >
-                    <a href="" class="discount-tag">UP TO 60% OFF</a>
-                </div>
-            </div>
-            <!-- *********************** -->
+            {/each}
+            
         </div>
     </div>
 </section>
+<!--*********************************Coupon Pop-Up GET-CODE Modal*********************************************** -->
+{#if showCouponModal === true || showDealModal === true}
+    <div class="modal-backdrop fade show"></div>
+{/if}
 
+{#if showCouponModal === true}
+    <div
+        class="modal fade show"
+        use:clickOutside
+        on:outsideclick={() => {
+            hideModal();
+        }}
+        id="displayCode"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        role="dialog"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        {modalData.title}
+                    </h5>
+                    <button
+                        type="button"
+                        on:click={() => {
+                            showCouponModal = false;
+                        }}
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body text-center">
+                    <span id="showCode">{modalData.coupon_code}</span>
+                </div>
+                <div>
+                    <h5 class="modal-info text-center">
+                        Select The Coupon Code & Hit Copy Button to Copy Your
+                        Code
+                    </h5>
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        on:click={() => copy(modalData.coupon_code)}
+                        >COPY CODE</button
+                    >
+                    <button type="button" on:click={()=>window.location.href=modalData.store.aff_url} class="btn visit-store"
+                        >Visit Store</button
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
+<!--*********************************Coupon Pop-Up GET-deal Modal*********************************************** -->
+{#if showDealModal === true}
+    <div
+        class="modal fade show"
+        use:clickOutside
+        on:outsideclick={() => {
+            hideModal();
+        }}
+        id="getDeal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">
+                        {modalData.title}
+                    </h5>
+                    <button
+                        type="button"
+                        on:click={() => {
+                            showDealModal = false;
+                        }}
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body text-center">
+                    <span id="showCode"
+                        >Deal Activated<i
+                            class="fa fa-check-circle-o"
+                            aria-hidden="true"
+                        ></i></span
+                    >
+                </div>
+                <div>
+                    <h5 class="modal-info text-center">
+                        No Coupon Code Required
+                    </h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn visit-store" on:click={()=>window.location.href=modalData.store.aff_url}
+                        >Visit Store</button
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
 <style>
     .main-section {
         padding-bottom: 2rem;
@@ -645,5 +627,36 @@
     }
     .store-item a:hover {
         text-decoration: underline;
+    }
+     /* ======================================Modals=========================================== */
+     .modal-header .modal-title {
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+    .modal-body #showCode {
+        border: 2px dashed #0d65a0;
+        padding: 0.5rem 4rem;
+        background-color: #dceeff;
+        font-weight: 500;
+    }
+    #showCode i {
+        margin-left: 0.5rem;
+        color: #0b8c4c;
+        font-size: 1.1rem;
+    }
+    .modal-info {
+        text-align: center;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .modal-footer .visit-store {
+        background-color: #8043dc;
+        color: #fff;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+    .show {
+        display: block;
     }
 </style>

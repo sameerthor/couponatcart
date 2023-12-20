@@ -1,4 +1,19 @@
-    <!-- *************************Navigation Bar*********************** -->
+<script>
+    /** @type {import('./$types').PageServerData} */
+    export let data;
+    const fetchStores=async (e)=>{
+      var q=e.target.value;
+      const response = await fetch(
+            'https://couponatcart.com/scoop/public/api/coupons?q='+q,
+            {
+                method: 'GET'
+            }
+        );
+        const result = await response.json();
+        data.res=result;
+    }
+</script>
+<!-- *************************Navigation Bar*********************** -->
     <section>
         <div class="container mt-4 navigation">
             <div class="row">
@@ -17,7 +32,7 @@
       <div class="row">
           <div class="col-lg-8 col-md-10 col-sm-12 mx-auto store-search">
               <form action="">
-                  <input type="text" placeholder="Search for stores ...">
+                  <input type="text" on:keyup={(e)=>fetchStores(e)} placeholder="Search for stores ...">
                   <button><i class="fa fa-search" aria-hidden="true"></i></button>
               </form>
           </div>   
@@ -30,358 +45,22 @@
       <div class="row">
           <div class="col-lg-10 col-md-12 col-sm-12 mx-auto store shadow-sm">
              <div class="row row-cols-2">
-              <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                  <div class="store-item shadow-sm">
-                      <div class="store-image">
-                           <a href="./store.html"><img src="./images/oyo.webp" alt=""></a>
-                      </div>
-                      <div class="store-coupon">
-                           <a href="./store.html">8 Coupons Available</a>
-                      </div>
-                  </div>
-               </div>
-               <!-- ******************* -->
+             
+               {#each data.res as item}
+                
                <div class="col-lg-3 col-md-4 col-sm-6 store-box">
                    <div class="store-item shadow-sm">
                        <div class="store-image">
-                            <a href="./store.html"><img src="./images/domino.webp" alt=""></a>
+                            <a href="/{item.slug}"><img src="https://couponatcart.com/images/{item.store_logo}" alt=""></a>
                        </div>
                        <div class="store-coupon">
-                            <a href="./store.html">8 Coupons Available</a>
+                            <a href="/{item.slug}">{item.name}</a>
+                            <span>{item.coupons_count} Coupons Available</span>
                        </div>
                    </div>
                 </div>
-                <!-- ******************* -->
-                <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                   <div class="store-item shadow-sm">
-                       <div class="store-image">
-                            <a href="./store.html"><img src="./images/boat.webp" alt=""></a>
-                       </div>
-                       <div class="store-coupon">
-                            <a href="./store.html">8 Coupons Available</a>
-                       </div>
-                   </div>
-                </div>
-                <!-- ******************* -->
-                <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                   <div class="store-item shadow-sm">
-                       <div class="store-image">
-                            <a href="./store.html"><img src="./images/swiggy.webp" alt=""></a>
-                       </div>
-                       <div class="store-coupon">
-                            <a href="./store.html">8 Coupons Available</a>
-                       </div>
-                   </div>
-                </div>
-                <!-- ******************* -->
-                  <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                     <div class="store-item shadow-sm">
-                         <div class="store-image">
-                              <a href="./store.html"><img src="./images/caffiene.webp" alt=""></a>
-                         </div>
-                         <div class="store-coupon">
-                              <a href="./store.html">8 Coupons Available</a>
-                         </div>
-                     </div>
-                  </div>
-                  <!-- ******************* -->
-                  <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/oven.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/firstcry.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/moglix.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/jio.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/puma.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/libas.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/noise.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/veromoda.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/gigsfgigs.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/tata-play.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/max.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/droom.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/himalaya.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/nyka.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/durex.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/reebok.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/agoda.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/paytm.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/udemy.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/airbnb.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/uber.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/sasti.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/bookmshow.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                      <div class="store-item shadow-sm">
-                          <div class="store-image">
-                               <a href="./store.html"><img src="./images/oyo.webp" alt=""></a>
-                          </div>
-                          <div class="store-coupon">
-                               <a href="./store.html">8 Coupons Available</a>
-                          </div>
-                      </div>
-                   </div>
-                   <!-- ******************* -->
-                   <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/oven.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/firstcry.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
-                    <div class="col-lg-3 col-md-4 col-sm-6 store-box">
-                       <div class="store-item shadow-sm">
-                           <div class="store-image">
-                                <a href="./store.html"><img src="./images/moglix.webp" alt=""></a>
-                           </div>
-                           <div class="store-coupon">
-                                <a href="./store.html">8 Coupons Available</a>
-                           </div>
-                       </div>
-                    </div>
-                    <!-- ******************* -->
+                {/each}
+
              </div>
           </div>   
       </div>
@@ -475,8 +154,8 @@
     color: #333a3f;
     font-weight: 500;
     padding-top: .8rem;
-    padding-bottom: .8rem;
-    font-size: .9rem;
+    /* padding-bottom: .8rem; */
+    font-size: 1rem;
 }
 @media(max-width:600px){
     .store-coupon a{
