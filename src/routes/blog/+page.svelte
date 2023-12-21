@@ -17,23 +17,23 @@
             <div class="col-lg-10 col-md-12 col-sm-10 mx-auto blog-category">
               <div class="row row-cols-6">
                     <div class="col-lg-1 category-item mx-auto">
-                        <a href=""><img src="./images/cosmetics_3501241.png" alt=""></a>
+                        <a href=""><img src="./image/cosmetics_3501241.png" alt=""></a>
                         <a href="" class="category-title">Beauty</a>
                     </div>
                     <div class="col-lg-1 category-item mx-auto">
-                        <a href=""><img src="./images/food.png" alt=""></a>
+                        <a href=""><img src="./image/food.png" alt=""></a>
                         <a href="" class="category-title">Food</a>
                     </div>
                     <div class="col-lg-1 category-item mx-auto">
-                        <a href=""><img src="./images/fashion.png" alt=""></a>
+                        <a href=""><img src="./image/fashion.png" alt=""></a>
                         <a href="" class="category-title">Fashion</a>
                     </div>
                     <div class="col-lg-1 category-item mx-auto">
-                        <a href=""><img src="./images/travel.png" alt=""></a>
+                        <a href=""><img src="./image/travel.png" alt=""></a>
                         <a href="" class="category-title">Travel</a>
                     </div>
                     <div class="col-lg-1 category-item mx-auto">
-                        <a href=""><img src="./images/stock.png" alt=""></a>
+                        <a href=""><img src="./image/stock.png" alt=""></a>
                         <a href="" class="category-title">Stock</a>
                     </div>
                     <div class="col-lg-1 category-item mx-auto">
@@ -72,7 +72,7 @@
                 <div class="row">
                     <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                        <div class="blog-item">
-                            <a href="./blog.html"><img src="./images/Cover_3D-2.avif" alt=""></a>
+                            <a href="./blog.html"><img src="./image/Cover_3D-2.avif" alt=""></a>
                             <a href="" class="blog-category">Fashion</a>
                             <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -85,7 +85,7 @@
                     </div>
                     <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/newyork.avif" alt=""></a>
+                             <a href="./blog.html"><img src="./image/newyork.avif" alt=""></a>
                              <a href="" class="blog-category">Fashion</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -99,7 +99,7 @@
                      <!-- ************************* -->
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/life-style.avif" alt=""></a>
+                             <a href="./blog.html"><img src="./image/life-style.avif" alt=""></a>
                              <a href="" class="blog-category">Lifestyle</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -113,7 +113,7 @@
                      <!-- ************************* -->
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/ai.avif" alt=""></a>
+                             <a href="./blog.html"><img src="./image/ai.avif" alt=""></a>
                              <a href="" class="blog-category">AI</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -127,7 +127,7 @@
                      <!-- ************************* -->
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/music.avif" alt=""></a>
+                             <a href="./blog.html"><img src="./image/music.avif" alt=""></a>
                              <a href="" class="blog-category">Music</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -141,7 +141,7 @@
                      <!-- ************************* -->
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/trading.avif" alt=""></a>
+                             <a href="./blog.html"><img src="./image/trading.avif" alt=""></a>
                              <a href="" class="blog-category">Trading</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -155,7 +155,7 @@
                      <!-- ************************* -->
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/Blog-1-1.avif" alt=""></a>
+                             <a href="./blog.html"><img src="./image/Blog-1-1.avif" alt=""></a>
                              <a href="" class="blog-category">Technology</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -169,7 +169,7 @@
                      <!-- ************************* -->
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/science.webp" alt=""></a>
+                             <a href="./blog.html"><img src="./image/science.webp" alt=""></a>
                              <a href="" class="blog-category">Science</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>
@@ -183,7 +183,7 @@
                      <!-- ************************* -->
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
-                             <a href="./blog.html"><img src="./images/techi.webp" alt=""></a>
+                             <a href="./blog.html"><img src="./image/techi.webp" alt=""></a>
                              <a href="#cat-page" class="blog-category">Technology</a>
                              <p class="description">
                                 <a href="./blog.html">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid dicta ex nemo ...</a>

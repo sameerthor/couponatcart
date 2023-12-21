@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 right">
                     <div>
-                        <img src="./images/shop_laptop.png" alt="" />
+                        <img src="./image/shop_laptop.png" alt="" />
                     </div>
                 </div>
             </div>
