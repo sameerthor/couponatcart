@@ -1,94 +1,112 @@
-<footer class="container-fluid footer-box">
-        <div class="container">
-            <div class="row footer-item">
-                <div class="col-sm-12 col-lg-4 footer-child">
-                   <strong>CouponATcart</strong>
-                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate maxime nobis praesentium provident vitae cum dolor rem atque, commodi autem tenetur odit libero, asperiores quasi!</p>
+<footer class="footer section-sm">
+    <!-- Container Start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+                <!-- About -->
+                <div class="block about">
+                    <a class="navbar-brand" href="/">
+                        <h3 class="h3 font-weight-bold">CouponAtCart</h3>
+                    </a>
+                    <p class="alt-color">CouponAtCart is a perfect destination to get Coupon Codes, Promo Codes, and
+                        Discount offers. We are on the 24/7 hunt for the latest money-saving coupons and deals. Shop
+                        from the leading brands and enjoy fantastic discounts on all the products and services. Stay
+                        tuned for big savings!</p>
+                    <!-- terms list -->
+
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 text-center footer-child">
-                    <h3>Site Pages</h3>
+            </div>
+            <!-- Link list -->
+            <div class="col-lg-2 offset-lg-1 col-md-3">
+                <div class="block">
+                    <h4 class="text-uppercase font-weight-bold">Quick Links</h4>
                     <ul>
-                       <li><a href="/">Home</a></li>
-                       <li><a href="/blog">Blog</a></li>
-                       <li><a href="/stores">Coupons</a></li>
-                       <li><a href="/store-categories">Categories</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 text-center footer-child">
-                    <h3>Extra Pages</h3>
-                    <ul>
-                       <li><a href="">About</a></li>
-                       <li><a href="">Privacy Policy</a></li>
-                       <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="/"><i class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> Home</a></li>
+                        <li><a href="/store-categories"><i class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> Categories</a></li>
+                        <li><a href="/stores"><i class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> Coupons</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="row text-center social-section">
-                <div class="social-footer">
-                   <a href=""><span><i class="fa fa-facebook-square" aria-hidden="true"></i></span></a>
-                   <a href=""><span><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-                   <a href=""><span><i class="fa fa-pinterest-p" aria-hidden="true"></i></span></a>
-                   <a href=""><span><i class="fa fa-telegram" aria-hidden="true"></i></span></a>
-                   <a href=""><span><i class="fa fa-youtube" aria-hidden="true"></i></span></a>
+            <!-- Link list -->
+            <div class="col-lg-2 col-md-3 offset-md-1 offset-lg-0">
+                <div class="block">
+                    <h4 class="text-uppercase font-weight-bold">Get Help</h4>
+                    <ul>
+                        <li><a href="/about"><i class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> About</a></li>
+                        <li><a href="/blog"><i class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> Blog</a></li>
+                        <li><a href="/affiliate-disclosure"><i class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> Affiliate Disclosure</a></li>
+                    </ul>
                 </div>
-                <div class="copyright">
-                    <p>&copy 2023 All Right Reserved couponatcart.com</p>
+            </div>
+            <!-- Promotion -->
+            <div class="col-lg-4 col-md-7 te">
+                <div class="block">
+                    <h4 class="text-uppercase font-weight-bold">Keep Update</h4>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Your Email..."
+                            aria-label="Your Email ..." aria-describedby="button-addon2"
+                            style="border-radius: 0!important; background-color: #f0ffff; height: 43px;">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                                style="padding: 13px 16px;border-radius: 0px;font-size: 12px;">SUBSCRIBE</button>
+                        </div>
+                    </div>
+                    <div style="color: #fff;font-size: 14px;margin-bottom: 5px;">
+                        You can opt out of our newsletters at any time. See our <a
+                            href="/privacy-policy">Privacy Policy</a>.
+                    </div>
+                </div>
+                <!-- App promotion -->
+                <div class="block-2 app-promotion">
+                    <a href="#">
+                        <!-- Icon -->
+                        <span class="lead mx-2"><i class="fa fa-facebook"></i></span>
+                    </a>
+                    <a href="#">
+                        <!-- Icon -->
+                        <span class="lead mx-2"><i class="fa fa-twitter"></i></span>
+                    </a>
+                    <a href="#">
+                        <!-- Icon -->
+                        <span class="lead mx-2"><i class="fa fa-linkedin"></i></span>
+                    </a>
+                    <a href="#">
+                        <!-- Icon -->
+                        <span class="lead mx-2"><i class="fa fa-instagram"></i></span>
+                    </a>
+                    <a href="#">
+                        <!-- Icon -->
+                        <span class="lead mx-2"><i class="fa fa-youtube"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
-    <style>
-    /* *****************************Footer************************************** */
-.footer-box{
-    background-color: #323232;
-    padding-top: 4rem;
-    padding-bottom: 2.8rem;
-    margin-top: 4.4rem;
-}
-.footer-item{
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    padding-bottom: 3rem;
-}
-.footer-item .footer-child{
-    margin-bottom: 1.6rem;
-}
-.footer-item strong{
-    font-weight: 700;
-    font-size: 2.2rem;
-    margin-bottom: .5rem;
-    display: block;
-}
-.footer-item p{
-    font-size: .95rem;
-    line-height: 1.4rem;
-}
-.copyright p{
-    font-size: .85rem;
-}
-.footer-item h3{
-    font-weight: 600;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-}
-.footer-item ul li a{
-    color: #fff;
-    padding: .3rem;
-    display: block;
-    font-size: .95rem;
-}
-.social-section{
-    color: #fff;
-    padding-top: 2.5rem;
-}
-.social-footer{
-    margin-bottom: 1.8rem;
-}
-.social-footer span{
-    margin: .6rem;
-    border: 1px solid #fff;
-    padding: .5rem;
-    border-radius: 50%;
-    color: #fff;
-}
-    </style>
+    </div>
+    <!-- Container End -->
+</footer>
+<!-- Footer Bottom -->
+<footer class="footer-bottom">
+    <!-- Container Start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <!-- Copyright -->
+                <div class="copyright">
+                    <p>© 2023 Copyright <a
+                            href="/">CouponAtCart</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container End -->
+    <!-- To Top -->
+    <div class="top-to">
+        <a id="top" href="#"><i class="fa fa-angle-double-up"></i></a>
+    </div>
+</footer>

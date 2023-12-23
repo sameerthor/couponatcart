@@ -4,7 +4,7 @@
     const fetchStores=async (e)=>{
       var q=e.target.value;
       const response = await fetch(
-            'https://admin.couponatcart.com/scoop/public/api/coupons?q='+q,
+            'https://couponatcart.com/scoop/public/api/coupons?q='+q,
             {
                 method: 'GET'
             }
