@@ -3,69 +3,60 @@
 
     /** @type {import('./$types').PageServerData} */
     export let data;
+    console.log(data);
 </script>
-<!-- *********************Page Navigation*********************** -->
- <section>
-    <div class="container mt-4">
-        <div class="row navigation">
-            <div class="col-lg-10 col-md-12 col-sm-12 mx-auto">
-               <div class="navigation-box">
-                   <p><a href="./index.html">Home</a><span>/</span><span>Category</span></p>
-               </div>
+<section class="allstrs">
+    <!-- Container Start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Section title -->
+                <div class="section-title">
+                    <h2>Categories</h2>
+                </div>
+                <div class="row border-bottom">
+                    <!-- Category list -->
+                    {#each data.res.categories as cat}
+                        
+                        <div class="col-lg-3 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
+                            <a href="store-category/{cat.slug}">
+                                <div class="card mb-3">
+                                    <div class="card-body text-center p-3">
+                                        {cat.name}
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {/each}
+
+                </div>
+                <br>
             </div>
         </div>
     </div>
-</section>  
-<!-- **********************************List Category************************** -->
-<section>
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-lg-10 col-md-12 col-sm-12 mx-auto">
-           <div class="row row-cols-3">
-            {#each data.res as item}
-                <div class="col-lg-2 col-md-3 col-sm-4 category-box">
-                    <div class="category-item">
-                        <div class="cat-img">
-                        <a href="/store-category/{item.slug}"> <img src="https://couponatcart.com/images/{item.thumb}" alt=""></a>
-                        </div>
-                        <div class="category-title">
-                            <a href="/store-category/{item.slug}">{item.name}</a>
-                        </div>
-                    </div>
-                </div>
-                {/each}
-                <!-- ******************** -->
-           </div>
+    <!-- Container End -->
+</section>
+
+<div class="blgbrd">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="/">
+                            <span itemprop="name">Home</span> </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li>></li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <span itemprop="name">Store Categories</span>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
 </div>
-</section> 
 <style>
-    .category-box{
-    margin-bottom: 1.2rem;
-}
-.category-item{
-    border: 1px solid #cccccc;
-}
-.cat-img img{
-    max-width:45%;
-    display: block;
-    margin: auto;
-    aspect-ratio: 2/3;
-    object-fit: contain;
-}
-.category-title {
-    text-align: center;
-    margin-bottom: .6rem;
-}
-.category-title a{
-    color: #222;
-    font-weight: 500;
-    font-size: .95rem;
-}
-@media(max-width:500px){
-    .category-title a{
-        font-size: .8rem;
-    }
-}
+    .allstrs{margin:24px 0}.blgbrd{margin:20px}.blgbrd ol li{display:inline-block;margin-right:10px}
 </style>

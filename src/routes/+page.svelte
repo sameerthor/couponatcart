@@ -28,7 +28,7 @@
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="block d-flex">
-                                        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="search"
+                                        <input type="text" class="form-control mx-2 mb-2 mr-sm-2 mb-sm-0" id="search"
                                             placeholder="Search for store" name="q">
                                         <!-- Search Button -->
                                         <button type="submit" class="btn btn-secondary">SEARCH</button>

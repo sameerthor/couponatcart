@@ -5,10 +5,10 @@ export const config = {
   };
 
 /** @type {import('./$types').PageServerLoad} */
-export async function load({ params }) {
-       console.log(params.slug);
+export async function load() {
+
         const response = await fetch(
-            'https://couponatcart.com/scoop/public/api/categories/'+params.slug,
+            'https://couponatcart.com/scoop/public/api/coupons',
             {
                 method: 'GET'
             }
@@ -16,5 +16,5 @@ export async function load({ params }) {
         const data = await response.json();
 	return {
         res : data
-    }
+	};
 }

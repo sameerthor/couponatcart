@@ -293,13 +293,13 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .form-control {
-    background-color: transparent;
-    color: #222;
-    box-shadow: none;
-    border-radius: 4px;
-    padding-left: 20px;
-    letter-spacing: .05em;
-    font-size: 15px
+    background-color: transparent !important;
+    color: #222 !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    padding-left: 20px !important;
+    letter-spacing: .05em !important;
+    font-size: 15px !important
 }
 
 .form-control:focus {
@@ -558,9 +558,9 @@ button {
 }
 
 .btn-secondary {
-    background: #368c86;
-    color: #f3f3f3;
-    border-color: #fff;
+    background: #368c86 !important;
+    color: #f3f3f3 !important;
+    border-color: #fff !important;
 }
 
 .btn-secondary:hover {
@@ -1273,8 +1273,8 @@ ul.pagination .active a {
 }
 
 .hero-area .advance-search .sbHolder .sbOptions {
-    background: #368c86;
-    border-color: #fff;
+    background: #368c86 !important;
+    border-color: #fff !important;
     z-index: 2
 }
 

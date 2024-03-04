@@ -8,13 +8,13 @@ export const config = {
 export async function load({ params }) {
        console.log(params.slug);
         const response = await fetch(
-            'https://couponatcart.com/scoop/public/api/slug/'+params.slug,
+            'https://couponatcart.com/scoop/public/api/slug/blog/'+params.slug,
             {
                 method: 'GET'
             }
         );
         const data = await response.json();
 	return {
-        store : data
+        res : data
     }
 }

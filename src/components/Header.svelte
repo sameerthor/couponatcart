@@ -11,13 +11,13 @@
             <a class="nav-link" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Category</a>
+            <a class="nav-link" href="/store-categories">Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Coupon</a>
+            <a class="nav-link" href="/stores">Coupon</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="/blog">Blog</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -31,6 +31,8 @@
     
     .nav-box{
               padding: .2rem 6rem;
+              box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+
             }
             .navbarbrand{
                 text-decoration: none;
@@ -77,4 +79,5 @@
             .nav-box .nav-item .nav-link:hover{
                color: #368c86;
             }
+
   </style>
