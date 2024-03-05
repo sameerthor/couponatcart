@@ -31,11 +31,11 @@ h2 {
 label {
     font-size: 14px;
     letter-spacing: 0;
-    color: #848484
+    color: #848484;
 }
 
 .nav-pills .nav-link {
-    font-size: 16px
+    font-size: 16px;
 }
 
 @media(max-width:480px) {
@@ -55,7 +55,7 @@ label {
 .nav-pills.with-background .nav-link {
     background: #fff;
     padding: 10px 0;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1)
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1);
 }
 
 .nav-pills.with-background .nav-link:hover {
@@ -2949,10 +2949,22 @@ article.single-post p {
     margin-top: -5px
 }
 
+/* ==========Footer================== */
 .footer {
     background: #368c86
 }
-
+.navbarBrand{
+    border: 1px solid red;
+    display: inline-block;
+    color: #222;
+    text-decoration: none;
+ }
+ .navbarBrand h3{
+    color: #222;
+    font-weight: 700 !important;
+    text-decoration: none;
+    display: inline-block;
+ }
 .footer .block h4 {
     font-size: 20px;
     margin-bottom: 25px

@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h2 class="font-weight-bold"> <span style="color:#368c86">Today's</span> Popular Deals</h2>
+                        <h2> <span style="color:#368c86">Today's</span> Popular Deals</h2>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
 <Carousel
   bind:this={carousel}
   particlesToShow={8}
-  arrows={false}
+  arrows={true}
 >
                     {#each data.stores  as res}
                         
@@ -99,7 +99,7 @@
                         <div class="slide-content">
                         <div class="deal-item bg-light">
                             <div class="media flex-shrink-0">
-                                <div class="media-body d-flex shadow">
+                                <div class="media-body d-flex ">
                                     <a href="{res.slug}">
                                         <!-- Card Image -->
                                         <img src="https://couponatcart.com/images/{res.store_logo}" alt="{ res.name }" class="img-fluid" loading="lazy">
@@ -184,7 +184,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h2 class="font-weight-bold"> Best<span style="color:#368c86"> Selling</span></h2>
+                        <h2 class="font-weight-bold"> Best <span style="color:#368c86"> Selling</span></h2>
                     </div>
                 </div>
             </div>
@@ -275,7 +275,44 @@
         <!-- Container End -->
     </section>
     <style>
-	.deal-item {
-		width: 88%;
-	}
+        .deal-item {
+            width: 88%;
+        }
+        .section-title h2{
+            font-weight: 600;
+        }
+        .slide-content .media-body{
+            border-radius: 50%;
+            background-color: #ebeaea;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide-content .media-body a{
+            background-color: #ebeaea;
+        }
+        .deal-list li h6{
+            font-size: .85rem;
+            letter-spacing: .5px;
+        }
+        .category-list {
+            padding: 0rem;
+            margin: 0rem;
+        }
+        .category-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .category-item .media .media-body img{
+            border-radius: 20px;
+            background-color: #fff;
+        }
+        .category-list  li a {
+            text-decoration: none;
+            color: #222;
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: .5px;
+        }
     </style>
