@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        <a itemprop="item" href="{{ url('/') }}">
+                        <a itemprop="item" href="/">
                             <span itemprop="name">Home</span> </a>
                         <meta itemprop="position" content="1" />
                     </li>
@@ -32,16 +32,16 @@
 
                 <div class="blgbx shadow">
                     <a href="/{blog.slug}">
-                        <img src="{{ Storage::url($blog->image) }}" alt="{{ $blog->title }}">
+                        <img src="" alt="{blog.title}">
                     </a>
-                    <a href="{{ url($blog->slug) }}">
+                    <a href="/{blog.slug}">
                         <h4 class="mx-4 pt-5">
-                            {{ $blog->title }}
+                          {blog.title}
                         </h4>
                     </a>
                     <p class="mx-3 pb-5">
-                        {!! substr(strip_tags($blog->content), 0, 350) !!}
-                        <a href="{{ url($blog->slug) }}" class="font-weight-bold">read more ..</a>
+                        {blog.content.replace(/<[^>]*>?/gm, '').substring(0, 50)}
+                        <a href="/{blog.slug}" class="font-weight-bold">read more ..</a>
                     </p>
                 </div>
 
