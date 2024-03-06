@@ -8,7 +8,7 @@ export const config = {
 export async function load({ params }) {
        console.log(params.slug);
         const response = await fetch(
-            'https://couponatcart.com/scoop/public/api/slug/blog/'+params.slug,
+            'https://couponatcart.com/scoop/public/api/home',
             {
                 method: 'GET'
             }
