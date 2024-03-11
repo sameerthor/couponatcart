@@ -1,5 +1,5 @@
  <!-- *************************Navigation Bar*********************** -->
- <section>
+ <!-- <section>
     <div class="container mt-4 navigation">
         <div class="row">
             <div class="col-lg-10 col-md-12 col-sm-10 mx-auto">
@@ -9,9 +9,9 @@
             </div>
         </div>
     </div>
-</section>              
+</section>               -->
 <!-- *******************************Blog-category************************************* -->
-<section>
+<!-- <section>
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-10 col-md-12 col-sm-10 mx-auto blog-category">
@@ -53,9 +53,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- **********************Subscribe********************************** -->
-<section class="mt-5">
+<!-- <section class="mt-5">
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-10 mx-auto text-center subscribe">
@@ -63,9 +63,9 @@
             </div>
         </div>
     </div>
-</section>                                 
+</section>                                  -->
 <!-- **********************************Blog-Listing******************************** -->
-<section class="all-blog">
+<!-- <section class="all-blog">
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-10 blog-box mx-auto">
@@ -96,7 +96,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+                   
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
                              <a href="./blog.html"><img src="./image/life-style.avif" alt=""></a>
@@ -110,7 +110,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+                     
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
                              <a href="./blog.html"><img src="./image/ai.avif" alt=""></a>
@@ -124,7 +124,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+                   
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
                              <a href="./blog.html"><img src="./image/music.avif" alt=""></a>
@@ -138,7 +138,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+                     
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
                              <a href="./blog.html"><img src="./image/trading.avif" alt=""></a>
@@ -152,7 +152,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+                   
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
                              <a href="./blog.html"><img src="./image/Blog-1-1.avif" alt=""></a>
@@ -166,7 +166,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+                    
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
                              <a href="./blog.html"><img src="./image/science.webp" alt=""></a>
@@ -180,7 +180,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+                    
                      <div class=" col-lg-4 col-md-6 col-sm-12 blog-box">
                         <div class="blog-item">
                              <a href="./blog.html"><img src="./image/techi.webp" alt=""></a>
@@ -194,7 +194,7 @@
                              </div>
                         </div>
                      </div>
-                     <!-- ************************* -->
+        
                 </div>
                 <div class="text-center mt-5 page-btn">
                         <button><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
@@ -209,10 +209,138 @@
             </div>
         </div>
     </div>
-</section>    
+</section>    -->
+<div class="blgbrd">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+					<a itemprop="item" href="/">
+						<span itemprop="name">Home</span>  </a>
+					<meta itemprop="position" content="1" />
+					</li>
+					<li>></li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<span itemprop="name">Blogs</span>
+					<meta itemprop="position" content="2" />
+					</li>
+				</ol>
+            </div>
+        </div>
+	</div>
+</div>
+
+<section class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="blgbx shadow">
+                    <a href="https://couponatcart.com/top-fashion-brands-that-offer-big-discounts-in-2024">
+                        <img src="https://couponatcart.com/images/blogs/top-fashion-brands-with-discounts.png" alt="Top Fashion Brands That Offer Big Discounts In 2024">
+                    </a>
+                    <a href="https://couponatcart.com/top-fashion-brands-that-offer-big-discounts-in-2024" class="blogHeading">
+                        <h4 class="mx-4 pt-5">
+                            Top Fashion Brands That Offer Big Discounts In 2024
+                        </h4>
+                    </a>
+                    <p class="mx-3 pb-5">
+                        Are you a fashion enthusiast always looking for big discounts? You are at the right place. In 2024, top fashion brands are offering huge discounts ranging from a whopping 25% to an unbelievable 40% off! So, get ready to revamp your wardrobe and experience the latest trends without breaking the bank. Experience luxury without the hefty price tag at
+                        <a href="https://couponatcart.com/top-fashion-brands-that-offer-big-discounts-in-2024" class="font-weight-bold">read more ..</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="blgbx shadow">
+                    <a href="https://couponatcart.com/how-to-save-big-on-salon-quality-products-exciting-deals-on-top-hair-care-brands">
+                        <img src="https://couponatcart.com/images/blogs/top-deals-on-hair-care-brands.png" alt="How To Save Big On Salon-Quality Products: Exciting Deals On Top Hair Care Brands">
+                    </a>
+                    <a href="https://couponatcart.com/how-to-save-big-on-salon-quality-products-exciting-deals-on-top-hair-care-brands" class="blogHeading">
+                        <h4 class="mx-4 pt-5">
+                            How To Save Big On Salon-Quality Products: Exciting Deals On Top Hair Care Brands
+                        </h4>
+                    </a>
+                    <p class="mx-3 pb-5">
+                        Are you tired of spending hundreds of dollars on salon-quality hair care products? Well, we've got some exciting news for you! Get ready to enjoy top deals on top hair care brands and save big on your favorite products. Whether you're looking for shampoos that cleanse and nourish, conditioners that hydrate, or styling products that give you the per
+                        <a href="https://couponatcart.com/how-to-save-big-on-salon-quality-products-exciting-deals-on-top-hair-care-brands" class="font-weight-bold">read more ..</a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="blgbx shadow">
+                    <a href="https://couponatcart.com/lorem-ipsum-dolor-blog-one">
+                        <img src="https://couponatcart.com/images/blogs/post-4.jpg" alt="Donec id dolor in erat imperdiet.">
+                    </a>
+                    <a href="https://couponatcart.com/lorem-ipsum-dolor-blog-one" class="blogHeading">
+                        <h4 class="mx-4 pt-5">
+                            Donec id dolor in erat imperdiet.
+                        </h4>
+                    </a>
+                    <p class="mx-3 pb-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod
+                        tempor incididunt labore et dolore magna aliqua. Ut enim ad minim
+                        veniam quis nostrud exercitation ullamco laboris nisi ut aliquip.ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur si
+                        <a href="https://couponatcart.com/lorem-ipsum-dolor-blog-one" class="font-weight-bold">read more ..</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <style>
+     .blgbrd{
+        margin: 20px;
+    }
+    .blgbrd ol{
+        padding: 0rem;
+    }
+    .blgbrd a{
+        color: #222;
+        text-decoration: none;
+    }
+    .blgbrd a:hover{
+        color: #368c86;
+        text-decoration: underline;
+    }
+    .blgbrd ol li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .blgbx img {
+        width: 100%;
+
+    }
+    .blogHeading{
+        color: #222;
+        text-decoration: none;
+    }
+    .blogHeading:hover{
+        text-decoration: underline;
+        text-decoration-color: #368c86;
+    }
+    .blgbx p{
+        color: #222;
+        padding: 10px;
+     }
+    .blgbx  p a{
+        font-weight: 600;
+        color: #222;
+        text-decoration: none;
+    }
+    @media (min-width: 1200px){
+        .container {
+            width: 1140px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+   
     
-    .breadcrumb-box{
+    /* .breadcrumb-box{
         margin-bottom: 0;
     }    
 .category-item img{
@@ -253,10 +381,10 @@
 .dropdown-center ul li{
     padding-top: 1rem;
     border-bottom: 1px solid #d9d5d5;
-}
+} */
 /* **************************Subscribe********************************** */
 
-.subscribe button{
+/* .subscribe button{
     border: none;
     background-color: #368c86;
     color: #fff;
@@ -273,10 +401,10 @@
 }
 .subscribe button:hover{
     background-color: #8983d5;
-}
+} */
 
 /* *********************Listing Blogs************************ */
-.all-blog{
+/* .all-blog{
     margin-top: 3.5rem;
     margin-bottom: 2rem;
 }
@@ -338,7 +466,7 @@
 }
 .page-btn button:hover{
     background-color: #8983d5;
-}
+} */
 /* *****************subscribe modal body*********************** */
 /* .subscribe-pop form{
     display: block;
@@ -381,7 +509,7 @@
     }
 } */
 /* ********************Navigation*********************** */
-.navigation .navigation-box{
+/* .navigation .navigation-box{
     background-color: #f4eded;
     
 }
@@ -404,5 +532,5 @@
     font-size: .86rem;
     color: #938682;
     font-weight: 500;
-}
+} */
 </style>

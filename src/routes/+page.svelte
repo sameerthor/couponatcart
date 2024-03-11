@@ -31,7 +31,7 @@
                                         <input type="text" class="form-control mx-2 mb-2 mr-sm-2 mb-sm-0" id="search"
                                             placeholder="Search for store" name="q">
                                         <!-- Search Button -->
-                                        <button type="submit" class="btn btn-secondary">SEARCH</button>
+                                        <button type="submit" class="btn btn-secondary homeSearch">SEARCH</button>
                                     </div>
                                 </div>
 
@@ -196,7 +196,7 @@
                             <img class="card-img-top" src="https://couponatcart.com/images/home/lego.webp" alt="LEGO Coupons"
                                 loading="lazy" style="width:100%">
                             <div class="card-body">
-                                <p class="card-text font-weight-bold my-2">LEGO Coupons</p>
+                                <p class=" card-text font-weight-bold " id="noborder">LEGO Coupons</p>
                             </div>
                         </div>
                     </a>
@@ -207,7 +207,7 @@
                             <img class="card-img-top" src="https://couponatcart.com/images/home/microsoft.webp"
                                 alt="Microsoft Coupons" loading="lazy">
                             <div class="card-body">
-                                <p class="card-text font-weight-bold my-2">Microsoft Coupons</p>
+                                <p class="card-text font-weight-bold" id="noborder">Microsoft Coupons</p>
                             </div>
                         </div>
                     </a>
@@ -218,7 +218,7 @@
                             <img class="card-img-top" src="https://couponatcart.com/images/home/rayban.webp" alt="RayBan Coupons"
                                 loading="lazy">
                             <div class="card-body">
-                                <p class="card-text font-weight-bold my-2">Ray Ban Coupons</p>
+                                <p class="card-text font-weight-bold" id="noborder">Ray Ban Coupons</p>
                             </div>
                         </div>
                     </a>
@@ -229,7 +229,7 @@
                             <img class="card-img-top" src="https://couponatcart.com/images/home/riverisland.webp"
                                 alt="River Island Coupons" loading="lazy">
                             <div class="card-body">
-                                <p class="card-text font-weight-bold my-2">River Island Coupons</p>
+                                <p class="card-text font-weight-bold" id="noborder">River Island Coupons</p>
                             </div>
                         </div>
                     </a>
@@ -245,7 +245,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h2 class="font-weight-bold"> Welcome to<span style="color:#368c86"> CouponAtCart!</span></h2>
+                        <h2 class="font-weight-bold"> Welcome to <span style="color:#368c86"> CouponAtCart!</span></h2>
                     </div>
                 </div>
             </div>
@@ -314,5 +314,27 @@
             font-size: .9rem;
             font-weight: 500;
             letter-spacing: .5px;
+        }
+        #noborder{
+            border: none;
+            text-decoration: underline !important;
+            text-decoration-color: #fff !important;
+            font-weight: 600;
+            letter-spacing: .5px;
+        }
+        #noborder:hover{
+            text-decoration-color: #368c86 !important;
+        }
+        .content-block{
+            text-align: right;
+        }
+        #search{
+            border-radius: 3px !important;
+        }
+        #search::placeholder{
+           font-weight: 500;
+        }
+        .homeSearch{
+            border-radius: 3px !important;
         }
     </style>

@@ -7,26 +7,6 @@
     export let data;
 
 </script>
-<div class="blgbrd">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-					<a itemprop="item" href="/">
-						<span itemprop="name">Home</span>  </a>
-					<meta itemprop="position" content="1" />
-					</li>
-					<li>></li>
-					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-						<span itemprop="name">{data.res.category.name}</span>
-					<meta itemprop="position" content="2" />
-					</li>
-				</ol>
-            </div>
-        </div>
-	</div>
-</div>
 <section class="allstrs">
     <!-- Container Start -->
     <div class="container">
@@ -53,13 +33,36 @@
     </div>
     <!-- Container End -->
 </section>
-
+<div class="blgbrd">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+					<a itemprop="item" href="/">
+						<span itemprop="name">Home</span>  </a>
+					<meta itemprop="position" content="1" />
+					</li>
+					<li>></li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<span itemprop="name">{data.res.category.name}</span>
+					<meta itemprop="position" content="2" />
+					</li>
+				</ol>
+            </div>
+        </div>
+	</div>
+</div>
 
 <style>
  .allstrs{margin:24px 0}.blgbrd{margin:20px}.blgbrd ol li{display:inline-block;margin-right:10px}
  .blgbrd a{
-        color: #0d6efd;
+        color: #222;
         text-decoration: none;
+    }
+    .blgbrd a span:hover{
+        color: #368c86;
+        text-decoration: underline;
     }
 
  .category-list{
@@ -75,5 +78,9 @@
         font-weight: 500;
         font-size: .9rem;
         letter-spacing: .5px;
+    }
+    .category-list .catName:hover{
+        color: #368c86;
+        text-decoration: underline;
     }
 </style>

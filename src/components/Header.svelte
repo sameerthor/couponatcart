@@ -103,5 +103,8 @@
               color: #fff;
               font-weight: 500;
             }
+            .nav-item .nav-link{
+              text-decoration: none;
+            }
 
   </style>
